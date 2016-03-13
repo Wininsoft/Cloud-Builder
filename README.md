@@ -34,6 +34,7 @@ Cloud Builder IDE基于Asp.Net MVC 5.4+html5+TypeScript， 对开发者来说可
   - BPL是Business Process Language的缩写，实现了C# 90%的语法， 以及其他的一些自定义的语法
   - BCL：Base Class Library， 类似于Net的BCL， 我们实现了最为基础的核心类库
   - 同时在Javascript以及.Net运行时下实现完整的语言引擎&核心库
+  - 代码编辑器，提供语法高亮，上下文感知的智能提示
 - 菜单树管理
 - 流程设计器
 - 报表设计器
@@ -70,6 +71,19 @@ Cloud Builder IDE基于Asp.Net MVC 5.4+html5+TypeScript， 对开发者来说可
   - 基于ionic 1.2.4+cordova，准备升级到ionic 2.0
   - 通用的客户端， 在第一次登陆系统时需先配置服务器的地址
 
-目前Cloud Builder还未进行开源， 我们计划在今年先把#2 Cloud Builder部署包进行开源， 明年把#1 Cloud Builder IDE进行开源。
+
+### 目标&计划
+
+Cloud Builder目前刚发布1.0版本， 这对我们来说是一个全新的起点。
+我们希望通过我们以及社区的努力，把Cloud Builder打造成全球顶级，最流行的的云开发工具，让大家把更多的时间专注于业务开发上而不是基础的底层架构。
+
+目前Cloud Builder还未进行开源， 但开源是我们计划中的一部分，这对我们来说非常重要， 在开源之前我们还有很多工作要做， 更多的单元测试，文档……
+
+我们计划分布对Cloud Builder进行开源
+- 今年第四季度对Cloud Builder部署包进行完全开源
+- 明年年中对Cloud Builder IDE进行开源
+
+我们希望让更多的开发者加入进来， 共同来实现这一伟大的目标！
+
 
 
