@@ -143,7 +143,6 @@ http://180.153.108.102
   - justgage
   - [ResizeSensor](https://github.com/marcj/css-element-queries)：跟踪dom元素大小变更
   - jQuery contextmenu：上下文菜单控件
-  - 
 - 后端
   - 基于Asp.Net MVC 5.4
   - Signalr 2：应用内即时通讯
