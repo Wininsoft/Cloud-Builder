@@ -17,3 +17,9 @@ Wininsoft.CloudBuilder.Presentation.Shell.ShellModel.registerShell(name, descrip
 
 #### 2，实现主界面
 在注册时所用的名称，我们需要用knockoutjs注册一个相同名称的component， component所传递的参数为Wininsoft.Presentation.Shell.ShellModel对象
+
+
+### 扩展样例
+
+点击[这里](http://180.153.108.102/News/DownloadAttachment?id=24)下载完整的主界面扩展样例， 包含完整的主界面功能， 菜单显示在顶部。
+
