@@ -66,11 +66,10 @@ Cloud Builder IDE基于Asp.Net MVC 5.4+html5+TypeScript， 对开发者来说可
   - 目前基于IIS+.Net 4.6.1
   - 计划今年年中支持linux，技术方案包括：.Net Core，Mono或Nodejs， 目前倾向于用Mono移植，等.Net Core足够稳定再迁移到上面，这样最节约成本。 Nodejs作为备选方案，主要原因是Nodejs目前更倾向于IO密集型应用而不是CPU密集型应用， 会对平台造成一定的限制。
   - 客户通过浏览器访问运行环境系统，支持
-   - IE 10+ （请注意我们是从IE10+开始支持的， 考虑到IE9不支持flexbox，会对平台功能性做比较大的限制）
-   - Chrome 30+
-   - Firefox 20+
-   - Safari 6+
-   
+    - IE 10+ （请注意我们是从IE10+开始支持的， 考虑到IE9不支持flexbox，会对平台功能性做比较大的限制）
+    - Chrome 30+
+    - Firefox 20+
+    - Safari 6+
 - App客户端
   - Android，iOS客户端
   - 基于ionic 1.2.4+cordova，准备升级到ionic 2.0
@@ -89,15 +88,25 @@ Cloud Builder IDE基于Asp.Net MVC 5.4+html5+TypeScript， 对开发者来说可
 - 1.1版本（2016年-4月）
   - 业务级多语言支持（注意：平台本身已经支持多语言）
   - 运行时审批流程管理
-
-- 1.2版本
+  - 多语言资源
+    - 繁体中文
+    - 法语
+    - 我们的资源有限， 其它语言资源需要开源后由社区进行完善
+    
+- 1.2版本（2016年6月）
   - linux支持
     - 初步的计划是先迁移到Mono，等.Net Core第二版出来再迁移到上面
     - 备用方案为Nodejs
     - Nodejs vs .Net
+      - Nodejs带来统一的语言堆栈，不仅对Cloud Builder开发者，也对扩展开发者来说更加简单，只需要考虑js一种场景
+      - Nodejs适合IO密集型应用而不是CPU密集型操作（单线程模式，多进程可以解决掉部分问题但总体来说可以这样进行概括），会对平添后续发展产生比较大的限制，这是为什么把Nodejs作为备用优先考虑.Net的最大因素
+      - Nodejs拥有无与伦比的开源社区，.Net还是个婴儿刚起步， 目前完全无法相提并论
 
 - 1.3版本
-- 2.0版本
+  - 业务市场
+  - 插件市场
+  - 支持App开发
+
 
 
 ### 目标&计划
