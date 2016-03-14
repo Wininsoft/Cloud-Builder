@@ -106,4 +106,62 @@ class IdentifierUtil
         }
     }
 ```
+- 把编译好的dll打包到ext扩展包中， 发布后服务端会检测到ext包中的dll，自动进行加载
 
+### javascript BPL扩展
+
+- 新建IdentifierUtil.js文件，内容如下：
+```js
+var IdentifierUtilInterceptor = (function () {
+    function IdentifierUtilInterceptor() {
+    }
+    IdentifierUtilInterceptor.prototype.getType = function (compileService, obj) {
+        return null;
+    };
+    //BPL方法执行前调用
+    IdentifierUtilInterceptor.prototype.beforeMethodCalled = function (callStack, methodInfo, obj, parameters, returnValue) {
+        if (methodInfo.declaringType.fullName == "System.Uri") {
+            if (methodInfo.name == "EscapeDataString") {
+                returnValue.value = encodeURIComponent(parameters[0]);
+                returnValue.processed = true;
+            }
+            else if (methodInfo.name == "EscapeUriString") {
+                returnValue.value = encodeURI(parameters[0]);
+                returnValue.processed = true;
+            }
+        }
+    };
+    //BPL方法执行后调用
+    IdentifierUtilInterceptor.prototype.afterMethodCalled = function (callStack, methodInfo, obj, parameters, returnValue) {
+    };
+    //BPL获取字段值前调用
+    IdentifierUtilInterceptor.prototype.beforeGetFieldValue = function (fieldInfo, obj, returnValue) {
+    };
+    //BPL获取字段值后调用
+    IdentifierUtilInterceptor.prototype.afterGetFieldValue = function (fieldInfo, obj, returnValue) {
+    };
+    //BPL设置字段值前调用
+    IdentifierUtilInterceptor.prototype.beforeSetFieldValue = function (fieldInfo, obj, returnValue) {
+    };
+    //BPL设置字段值后调用
+    IdentifierUtilInterceptor.prototype.afterSetFieldValue = function (fieldInfo, obj, returnValue) {
+    };
+    //BPL获取属性值前调用
+    IdentifierUtilInterceptor.prototype.beforeGetPropertyValue = function (callStack, propertyInfo, obj, indexParameters, returnValue) {
+    };
+    //BPL获取属性值后调用
+    IdentifierUtilInterceptor.prototype.afterGetPropertyValue = function (callStack, propertyInfo, obj, indexParameters, returnValue) {
+    };
+    //BPL设置属性值前调用
+    IdentifierUtilInterceptor.prototype.beforeSetPropertyValue = function (callStack, propertyInfo, obj, indexParameters, returnValue) {
+    };
+    //BPL设置属性值后调用
+    IdentifierUtilInterceptor.prototype.afterSetPropertyValue = function (callStack, propertyInfo, obj, indexParameters, returnValue) {
+    };
+    return UriInterceptor;
+}());
+//注册BPL语言引擎扩展
+Wininsoft.CloudBuilder.BPL.CompileService.registerObjectInterceptor(new IdentifierUtilInterceptor());
+```
+
+- 在extension.json文件的resources节点添加'IdentifierUtil.js'引用
