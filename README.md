@@ -117,31 +117,31 @@ http://180.153.108.102
 
 - 前端
   - 基于Html5+Javascript
-  - TypeScript
-  - Cordova：App混合式框架
-  - Ionic：App UI框架
-  - Knockoutjs：数据绑定引擎
-  - pegjs：BPL语法树解析
-  - jQuery
-  - jQuery UI
-  - fancytree：树形控件
+  - [TypeScript](https://github.com/Microsoft/TypeScript)
+  - [Cordova](http://cordova.apache.org/)：App混合式框架
+  - [Ionic](https://github.com/driftyco/ionic)：App UI框架
+  - [Knockoutjs](http://knockoutjs.com/)：数据绑定引擎
+  - [pegjs](http://pegjs.org/)：BPL语法树解析
+  - [jQuery](http://www.jquery.com/)
+  - [jQuery UI]()
+  - [fancytree](https://github.com/mar10/fancytree)：树形控件
   - jQuery Form
   - q.js：Promise实现
   - jQuery.print：dom元素打印
   - Filemanager：文件管理器
   - free-jqGrid：数据表格控件
   - dockspawn：窗口停靠控件
-  - CodeMirror：代码编辑器
-  - ckeditor：html编辑器
+  - [CodeMirror](http://codemirror.net/)：代码编辑器
+  - [ckeditor](http://ckeditor.com/)：html编辑器
   - jui_dropdown
-  - fullcalendar：日历控件
+  - [fullcalendar](https://github.com/fullcalendar/fullcalendar)：日历控件
   - jquery.bxslider：轮播控件
   - modernizr
   - waitMe.js
-  - plotly：图表控件库
+  - [plotly](https://github.com/plotly/plotly.js)：图表控件库
   - moment.js
   - justgage
-  - ResizeSensor：跟踪dom元素大小变更
+  - [ResizeSensor](https://github.com/marcj/css-element-queries)：跟踪dom元素大小变更
   - jQuery contextmenu：上下文菜单控件
   - 
 - 后端
