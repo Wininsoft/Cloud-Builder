@@ -8,8 +8,8 @@ Cloud Builder是完整的云RAD开发工具，用于快速定制企业级信息�
 http://i.youku.com/u/UMzQwOTczMDMwNA==?qq-pf-to=pcqq.discussion
 
 Cloud Builder分为2部分：
-1， Cloud Builder IDE
-2， Cloud Builder部署包
+- Cloud Builder IDE
+- Cloud Builder部署包
 
 ### Cloud Builder IDE
 Cloud Builder IDE基于Asp.Net MVC 5.4+html5+TypeScript， 对开发者来说可以直接用浏览器打开进行在线项目的开发。
