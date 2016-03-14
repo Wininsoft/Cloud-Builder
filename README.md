@@ -4,7 +4,8 @@
 
 Cloud Builder是完整的云RAD开发工具，用于快速定制企业级信息化系统， 典型的应用包括ERP，OA，CRM，以及类似业务形态的业务系统。
 
-大家可以通过入门视频对Cloud Builder做一个总体的了解：http://i.youku.com/u/UMzQwOTczMDMwNA==?qq-pf-to=pcqq.discussion
+大家可以通过入门视频对Cloud Builder做一个总体的了解：
+http://i.youku.com/u/UMzQwOTczMDMwNA==?qq-pf-to=pcqq.discussion
 
 Cloud Builder分为2部分：
 1， Cloud Builder IDE
@@ -75,11 +76,11 @@ Cloud Builder IDE基于Asp.Net MVC 5.4+html5+TypeScript， 对开发者来说可
 ### 目标&计划
 
 Cloud Builder目前刚发布1.0版本， 这对我们来说是一个全新的起点。
-我们希望通过我们以及社区的努力，把Cloud Builder打造成全球顶级，最流行的的云开发工具，让大家把更多的时间专注于业务开发上而不是基础的底层架构。
+我们希望通过我们以及社区的努力，把Cloud Builder打造成全球顶级，最流行的云开发工具，让大家把更多的时间专注于业务开发上而不是基础的底层架构。
 
 目前Cloud Builder还未进行开源， 但开源是我们计划中的一部分，这对我们来说非常重要， 在开源之前我们还有很多工作要做， 更多的单元测试，文档……
 
-我们计划分布对Cloud Builder进行开源
+我们计划分步对Cloud Builder进行开源
 - 今年第四季度对Cloud Builder部署包进行完全开源
 - 明年年中对Cloud Builder IDE进行开源
 
