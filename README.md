@@ -107,7 +107,11 @@ Cloud Builder IDE基于Asp.Net MVC 5.4+html5+TypeScript， 对开发者来说可
   - 插件市场
   - 支持App开发
 
+### 试用Cloud Builder
+目前Cloud Builder还没有向公众开放， 目前只开放给我们内部的合作伙伴测试试用， 我们将在下半年向所有用户进行开放，如果您目前迫切希望体验Cloud Builder， 请联系我们，我们将给您提供邀请码进行注册。
 
+体验地址：
+http://180.153.108.102
 
 ### 目标&计划
 
