@@ -55,7 +55,7 @@ class IdentifierUtil
             if (methodInfo.Parent.FullName == "IdentifierUtil")
             {
                 //如果当前执行的方法名称是Isvalid
-                if (methodInfo.Name == "Isvalid")
+                if (methodInfo.Name == "IsValid")
                 {
                     string identifer=parameters[0];//获取第一个参数的值，为字符串
                     returnValue = true;//设置返回值
@@ -120,14 +120,11 @@ var IdentifierUtilInterceptor = (function () {
     };
     //BPL方法执行前调用
     IdentifierUtilInterceptor.prototype.beforeMethodCalled = function (callStack, methodInfo, obj, parameters, returnValue) {
-        if (methodInfo.declaringType.fullName == "System.Uri") {
-            if (methodInfo.name == "EscapeDataString") {
-                returnValue.value = encodeURIComponent(parameters[0]);
-                returnValue.processed = true;
-            }
-            else if (methodInfo.name == "EscapeUriString") {
-                returnValue.value = encodeURI(parameters[0]);
-                returnValue.processed = true;
+        if (methodInfo.declaringType.fullName == "IdentifierUtil") {
+            if (methodInfo.name == "IsValid") {
+                var identifier=parameters[0];//获取传入的参数值
+                returnValue.value = true;//设置返回值
+                returnValue.processed = true;//设置为true表示已经成功处理了
             }
         }
     };
@@ -164,4 +161,16 @@ var IdentifierUtilInterceptor = (function () {
 Wininsoft.CloudBuilder.BPL.CompileService.registerObjectInterceptor(new IdentifierUtilInterceptor());
 ```
 
-- 在extension.json文件的resources节点添加'IdentifierUtil.js'引用
+- 在extension.json文件的resources节点添加'IdentifierUtil.js'引用， 在运行时会自动加载IdentifierUtil.js文件并执行
+
+### BPL如何调用？
+
+以上扩展包安装到项目中以后， 就可以Cloud Builder中任意支持自定义代码或表达式的代码编辑器中调用，如
+if(IdentifierUtil.IsValid('test'))
+{
+    //如果符合条件，执行代码
+}
+else{
+    //如果不符合条件，执行代码
+}
+
