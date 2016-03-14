@@ -55,6 +55,10 @@ Cloud Builder IDE基于Asp.Net MVC 5.4+html5+TypeScript， 对开发者来说可
 - 团队管理
 - 源码管理
 - 计划任务
+- 发布
+  - 在线发布
+  - 离线发布
+  - 发布方案
 - 任意窗口可拖拽（类似Visual Studio开发工具）
 
 ### Cloud Builder部署包
