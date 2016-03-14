@@ -118,42 +118,41 @@ http://180.153.108.102
 - 前端
   - 基于Html5+Javascript
   - TypeScript
-  - Cordova
-  - Ionic
-  - Knockoutjs
-  - pegjs
+  - Cordova：App混合式框架
+  - Ionic：App UI框架
+  - Knockoutjs：数据绑定引擎
+  - pegjs：BPL语法树解析
   - jQuery
   - jQuery UI
-  - fancytree
+  - fancytree：树形控件
   - jQuery Form
-  - q.js
-  - jQuery.print
-  - Filemanager
-  - free-jqGrid
-  - dockspawn
-  - CodeMirror
-  - ckeditor
+  - q.js：Promise实现
+  - jQuery.print：dom元素打印
+  - Filemanager：文件管理器
+  - free-jqGrid：数据表格控件
+  - dockspawn：窗口停靠控件
+  - CodeMirror：代码编辑器
+  - ckeditor：html编辑器
   - jui_dropdown
-  - fullcalendar
-  - jquery.bxslider
+  - fullcalendar：日历控件
+  - jquery.bxslider：轮播控件
   - modernizr
   - waitMe.js
-  - plotly
+  - plotly：图表控件库
   - moment.js
   - justgage
-  - ResizeSensor
-  - jQuery contextmenu
+  - ResizeSensor：跟踪dom元素大小变更
+  - jQuery contextmenu：上下文菜单控件
   - 
 - 后端
-  - 基于Asp.Net 5.4
-  - Signalr 2
-  - Angular 4
-  - Entity Framework
-  - Newtonsoft Json
-  - CsvHelper
-  - Npoi
-  - EPPlus
-  - 
+  - 基于Asp.Net MVC 5.4
+  - Signalr 2：应用内即时通讯
+  - Antlr V4：BPL语法树解析
+  - Entity Framework：Cloud IDE服务端数据库访问层
+  - Newtonsoft Json：Json操作类库
+  - CsvHelper：csv导入导出
+  - NPoi:：xls导入导出
+  - EPPlus：xlsx导入导出
 
 ### 目标&计划
 
