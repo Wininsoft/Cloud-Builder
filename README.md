@@ -113,6 +113,48 @@ Cloud Builder IDE基于Asp.Net MVC 5.4+html5+TypeScript， 对开发者来说可
 体验地址：
 http://180.153.108.102
 
+### 技术堆栈
+
+- 前端
+  - 基于Html5+Javascript
+  - TypeScript
+  - Cordova
+  - Ionic
+  - Knockoutjs
+  - pegjs
+  - jQuery
+  - jQuery UI
+  - fancytree
+  - jQuery Form
+  - q.js
+  - jQuery.print
+  - Filemanager
+  - free-jqGrid
+  - dockspawn
+  - CodeMirror
+  - ckeditor
+  - jui_dropdown
+  - fullcalendar
+  - jquery.bxslider
+  - modernizr
+  - waitMe.js
+  - plotly
+  - moment.js
+  - justgage
+  - ResizeSensor
+  - jQuery contextmenu
+  - 
+- 后端
+  - 基于Asp.Net 5.4
+  - Signalr 2
+  - Angular 4
+  - Entity Framework
+  - Newtonsoft Json
+  - CsvHelper
+  - Npoi
+  - EPPlus
+  - 
+
 ### 目标&计划
 
 Cloud Builder目前刚发布1.0版本， 这对我们来说是一个全新的起点。
