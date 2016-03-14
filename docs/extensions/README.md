@@ -22,7 +22,7 @@ Cloud Builder项目节点下包含Extensions（扩展）节点，在这个节点
 ### 扩展包结构
 扩展包的后缀是ext， 是标准的zip格式文件， 压缩包下必须包含extension.json文件， 以及任何其它必要的文件。
 extension.json的样例如下：
-
+```json
 {
   "name": "TopMenuShell",
   "version": "1.0.0.0",
@@ -30,6 +30,7 @@ extension.json的样例如下：
   "publishDate": "2016-03-14",
   "resources": [ "superfish/css/superfish.css", "superfish/js/hoverIntent.js", "superfish/js/superfish.js", "ShellViewModel.js", "NavigationPane.js", "ChangePasswordModel.js" ]
 }
+```
 
 描述如下：
 - name：扩展的名称
