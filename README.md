@@ -162,6 +162,10 @@ Cloud Builder目前刚发布1.0版本， 这对我们来说是一个全新的起
 
 我们希望让更多的开发者加入进来， 共同来实现这一伟大的目标！
 
+### Cloud Builder IDE是否开源?
+目前我们还没有这方面的打算，我们认为Cloud Builder IDE和Cloud Builder部署包类似于Visual Studio和.Net Framework的关系。
+对于IDE来说，更重要的是提供扩展机制，让第三方开发者可以通过扩展的方式去满足自己多样化的业务需求。
+
 ### 我们如何盈利？
 
 - 在Cloud Builder上开发的项目，如果愿意把项目公开然所有人都搜索到，则可以免费使用
