@@ -153,6 +153,14 @@ http://180.153.108.102
   - NPoi:：xls导入导出
   - EPPlus：xlsx导入导出
 
+### 竞争对手
+
+- Justep
+- K2
+- LightSwith
+
+需要注意的是我们是针对企业级信息系统以及App的RAD平台，并不跟通用的开发工具如Visual Studio，Eclipse等有任何竞争关系。
+
 ### 目标&计划
 
 Cloud Builder目前刚发布1.0版本， 这对我们来说是一个全新的起点。
