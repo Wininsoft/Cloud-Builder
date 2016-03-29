@@ -10,9 +10,10 @@
 form提交地址：Login
 form提交方式：post
 
-提交后，如果有用户名密码或其他错误，会重新加载登录页面，并且url中会包含：
-- userName：用户名
-- errorMessage：错误消息
+在html页面中可使用以下替换文本，加载界面时会自动替换成实际的文本：
+-@{UserName}：用户名，在提交后有错误，会自动记录上次提交的用户名
+-@{ErrorMessage}：错误消息，在提交后如果有错误，这个值就是具体错误消息
+-@{ApplicationName}：应用显示名称或名称
 
 ### 获取应用的logo
 ../ApplicationService/GetLogo
