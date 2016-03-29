@@ -7,6 +7,7 @@
 - password：密码
 - returnUrl：返回地址（可选）
 
+表单设置:
 - form提交地址：Login
 - form提交方式：post
 
