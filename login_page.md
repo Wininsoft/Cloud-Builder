@@ -7,9 +7,8 @@
 - password：密码
 - returnUrl：返回地址（可选）
 
-其它设置：
--form提交地址：Login
--form提交方式：post
+- form提交地址：Login
+- form提交方式：post
 
 在html页面中可使用以下替换文本，加载界面时会自动替换成实际的文本：
 -@{UserName}：用户名，在提交后有错误，会自动记录上次提交的用户名
