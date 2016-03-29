@@ -14,6 +14,10 @@ form提交方式：post
 - userName：用户名
 - errorMessage：错误消息
 
+### 获取应用的logo
+../ApplicationService/GetLogo
+
+
 ### 配置登录页
 
 在项目浏览器中选中根节点， 在属性编辑器中可以看到“登录页”设置，选择上一步添加的登录页面。
