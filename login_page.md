@@ -8,6 +8,7 @@
 - returnUrl：返回地址（可选）
 
 form提交的地址：Login
+form提交方式：post
 
 提交后，如果有用户名密码或其他错误，会重新加载登录页面，并且url中会包含：
 - userName：用户名
