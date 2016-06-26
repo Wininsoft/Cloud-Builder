@@ -21,5 +21,5 @@ Wininsoft.CloudBuilder.Presentation.Shell.ShellModel.registerShell(name, descrip
 
 ### 扩展样例
 
-点击[这里](http://180.153.108.102/News/DownloadAttachment?id=24)下载完整的主界面扩展样例， 包含完整的主界面功能， 菜单显示在顶部。
+点击[这里](http://180.153.108.102/News/Detail?id=1097)下载完整的主界面扩展样例， 包含完整的主界面功能， 菜单显示在顶部。
 
