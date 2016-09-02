@@ -2,14 +2,15 @@
 
 ### 什么是Cloud Builder？
 
-Cloud Builder是完整的云RAD开发工具，用于快速定制企业级信息化系统， 典型的应用包括ERP，OA，CRM，以及类似业务形态的业务系统。
+Cloud Builder是完整的云RAD开发工具，用于快速定制企业级信息化系统及移动App， 典型的应用包括ERP，OA，CRM，BI以及类似业务形态的业务系统。
 
 大家可以通过入门视频对Cloud Builder做一个总体的了解：
 http://i.youku.com/u/UMzQwOTczMDMwNA==?qq-pf-to=pcqq.discussion
 
-Cloud Builder分为2部分：
+Cloud Builder分为3部分：
 - Cloud Builder IDE
 - Cloud Builder部署包
+- 微英业务平台（移动客户端，android/iOS）
 
 ### Cloud Builder IDE
 Cloud Builder IDE基于Asp.Net MVC 5.4+html5+TypeScript， 对开发者来说可以直接用浏览器打开进行在线项目的开发。
