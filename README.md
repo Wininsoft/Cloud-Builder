@@ -36,6 +36,7 @@ Cloud Builder IDE基于Asp.Net MVC 5.4+html5+TypeScript， 对开发者来说可
   - BCL：Base Class Library， 类似于Net的BCL， 我们实现了最为基础的核心类库
   - 同时在Javascript以及.Net运行时下实现完整的语言引擎&核心库
   - 代码编辑器，提供语法高亮，上下文感知的智能提示
+  - 断点调试，支持远程调试
 - 菜单树管理
 - 流程设计器
 - 报表设计器
