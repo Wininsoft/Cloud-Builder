@@ -7,10 +7,9 @@ Cloud Builder是完整的云RAD开发工具，用于快速定制企业级信息�
 大家可以通过入门视频对Cloud Builder做一个总体的了解：
 http://i.youku.com/u/UMzQwOTczMDMwNA==?qq-pf-to=pcqq.discussion
 
-Cloud Builder分为3部分：
+Cloud Builder分为2部分：
 - Cloud Builder IDE
 - Cloud Builder部署包
-- 微英业务平台（移动客户端，android/iOS）
 
 ### Cloud Builder IDE
 Cloud Builder IDE基于Asp.Net MVC 5.4+html5+TypeScript， 对开发者来说可以直接用浏览器打开进行在线项目的开发。
@@ -67,13 +66,13 @@ Cloud Builder IDE基于Asp.Net MVC 5.4+html5+TypeScript， 对开发者来说可
   - 目前基于IIS+.Net 4.6.1
   - 计划今年年中支持linux，技术方案包括：.Net Core，Mono或Nodejs， 目前倾向于用Mono移植，等.Net Core足够稳定再迁移到上面，这样最节约成本。 Nodejs作为备选方案，主要原因是Nodejs目前更倾向于IO密集型应用而不是CPU密集型应用， 会对平台造成一定的限制。
   - 客户通过浏览器访问运行环境系统，支持
-    - IE 10+ （请注意我们是从IE10+开始支持的， 考虑到IE9不支持flexbox，会对平台功能性做比较大的限制）
+    - IE 10+ （请注意我们是从IE10+开始支持的， 考虑到IE9不支持flexbox，会对平台功能性做比较大的限制），注意：即将移除对IE10的支持，考虑的主流的类库入jquery UI等下面版本都不再支持IE10
     - Chrome 30+
     - Firefox 20+
     - Safari 6+
 - App客户端
   - Android，iOS客户端
-  - 基于ionic 1.2.4+cordova，准备升级到ionic 2.0
+  - 基于ionic 2.0+cordova，注意，ionic目前还在beta11阶段
   - 通用的客户端， 在第一次登陆系统时需先配置服务器的地址
 
 ### 功能路线图
@@ -96,12 +95,12 @@ Cloud Builder IDE基于Asp.Net MVC 5.4+html5+TypeScript， 对开发者来说可
     
 - 1.2版本（2016年6月）
   - linux支持
-    - 初步的计划是先迁移到Mono，等.Net Core第二版出来再迁移到上面
+    - 等.Net Core第二版出来再迁移到上面，根据微软官方的说法，在2017年年中的时候
     - 备用方案为Nodejs
-    - Nodejs vs .Net
+    - Nodejs vs .Net Core
       - Nodejs带来统一的语言堆栈，不仅对Cloud Builder开发者，也对扩展开发者来说更加简单，只需要考虑js一种场景
       - Nodejs适合IO密集型应用而不是CPU密集型操作（单线程模式，多进程可以解决掉部分问题但总体来说可以这样进行概括），会对平添后续发展产生比较大的限制，这是为什么把Nodejs作为备用优先考虑.Net的最大因素
-      - Nodejs拥有无与伦比的开源社区，.Net还是个婴儿刚起步， 目前完全无法相提并论
+      - Nodejs拥有无与伦比的开源社区，.Net在开源社区建设上还是个婴儿刚起步， 目前完全无法相提并论
 
 - 1.3版本
   - 业务市场
@@ -110,9 +109,10 @@ Cloud Builder IDE基于Asp.Net MVC 5.4+html5+TypeScript， 对开发者来说可
 
 ### 试用Cloud Builder
 目前Cloud Builder还没有向公众开放， 目前只开放给我们内部的合作伙伴测试试用， 我们将在下半年向所有用户进行开放，如果您目前迫切希望体验Cloud Builder， 请联系我们，我们将给您提供邀请码进行注册。
+QQ群：387158200
 
 体验地址：
-http://180.153.108.102
+http://www.cloudbuilder.com:14000
 
 ### 技术堆栈
 
@@ -144,6 +144,7 @@ http://180.153.108.102
   - justgage
   - [ResizeSensor](https://github.com/marcj/css-element-queries)：跟踪dom元素大小变更
   - jQuery contextmenu：上下文菜单控件
+  - monaco:html，js，css代码编辑器 
 - 后端
   - 基于Asp.Net MVC 5.4
   - Signalr 2：应用内即时通讯
