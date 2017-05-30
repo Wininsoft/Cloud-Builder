@@ -180,9 +180,10 @@ foreach(var item in source)
 其中source表示要进行循环的数据源，必须实现System.Collections.IEnumerable接口，item表示正在循环的数据项，循环项语句中可以访问到。
 
 示例：
+```csharp
 var result="";
 foreach(var item in new[]{"a","b"}){
 	result+=item;
 }
-
+```
 循环结束后，result的结果应该是ab
