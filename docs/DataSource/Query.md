@@ -31,10 +31,10 @@ select * from [Customer] as [it] where [it].[Type]=='Personal' and w [it]NextVis
 ### 排序
 
 语法：
-查询.OrderBy(lambdad)，升序
-查询.OrderByDescending(lambdad)，降序
-查询.ThenBy(lambdad)，附加升序
-查询.ThenByDescending(lambdad)，附加降序
+- 查询.OrderBy(lambdad)，升序
+- 查询.OrderByDescending(lambdad)，降序
+- 查询.ThenBy(lambdad)，附加升序
+- 查询.ThenByDescending(lambdad)，附加降序
 
 其中升序/附加升序，降序/附加降序的区别是， 如果查询已经有排序， 则升序/降序会覆盖掉查询中原有的排序，而附加升序/降序不会，而是在原有查询排序基础上进一步排序
 
@@ -57,8 +57,8 @@ select * from [Customer] as [it] order by [it].[Customer], [it].[Amount] desc
 ### 分页
 
 语法：
-查询.Take(int pageSize); 获取给定条数的数据
-查询.Skip(int startIndex); 从给定行号开始获取数据
+- 查询.Take(int pageSize); 获取给定条数的数据
+- 查询.Skip(int startIndex); 从给定行号开始获取数据
 
 示例：
 - ApplicationData.OrderSet.OrderByDescending(o=>o.Amount).Take(20)
