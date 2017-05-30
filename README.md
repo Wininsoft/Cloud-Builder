@@ -6,6 +6,7 @@ Cloud Builder是完整的云RAD开发工具，用于快速定制企业级信息�
 
 大家可以通过入门视频对Cloud Builder做一个总体的了解：
 http://i.youku.com/u/UMzQwOTczMDMwNA==?qq-pf-to=pcqq.discussion
+http://www.cloudbuilder.cc/video
 
 Cloud Builder分为2部分：
 - Cloud Builder IDE
@@ -71,10 +72,11 @@ Cloud Builder IDE基于Asp.Net MVC 5.4+html5+TypeScript， 对开发者来说可
     - Firefox 20+
     - Safari 6+
 - App客户端
-  - Android，iOS客户端，iOS客户端可在App Store搜索微英业务平台下载
+  - Android，Cloud Builder首页版本发布新闻中的附件中下载
+  - iOS客户端，可在App Store搜索微英业务平台下载
   - 基于ionic 3.2+cordova 6.3.1
   - 通用的客户端， 在第一次登陆系统时需先配置服务器的地址
-
+  - 可打包个性化的App，自定义的Icon，名称，应用包名称等
 
 ### 试用Cloud Builder
 QQ群：387158200
@@ -136,8 +138,6 @@ http://www.cloudbuilder.com
 Cloud Builder目前刚发布1.0版本， 这对我们来说是一个全新的起点。
 我们希望通过我们以及社区的努力，把Cloud Builder打造成全球顶级，最流行的云开发工具，让大家把更多的时间专注于业务开发上而不是基础的底层架构。
 
-为了让大家更加放心的使用Cloud Builder，我们计划在今年第三/四季度开放Cloud Builder部署包的所有源码。
-
 我们希望让更多的开发者加入进来， 共同来实现这一伟大的目标！
 
 ### Cloud Builder IDE是否开源?
@@ -148,6 +148,6 @@ Cloud Builder目前刚发布1.0版本， 这对我们来说是一个全新的起
 ### 感谢的话
 
 - 首先把微不足道的成就归给耶和华上帝我们的神。
-- 感谢我的师傅江千帆， 13年前认识他让我在.Net学习上受益颇多，11年前第一次去外地跟着他在东风汽车实施的经历至今难忘， 10年前介绍我来上海是我走上了平台研发之路。
+- 感谢我的师傅江千帆， 14年前认识他让我在.Net学习上受益颇多，11年前第一次去外地跟着他在东风汽车实施的经历至今难忘， 11年前介绍我来上海是我走上了平台研发之路。
 - 感谢微软的LightSwitch， Cloud Builder很大一部分灵感来自于LightSwitch， 虽然微软现在基本上已经放弃LightSwitch，但我们完整的继承了它的核心思想， 并且做了质的改进， 让改进版的‘LightSwitch’在各方面都做了极大的加强， 可以完全适用于大型项目。
 - 感谢在杭州启擎公司当平台架构师近2年的经历， 让我可以全职全身心的投入到Cloud Builder的前身启擎快速研发平台中来， 这对Cloud Builder的开发提供了宝贵的经验。
