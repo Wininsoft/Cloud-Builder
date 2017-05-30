@@ -108,7 +108,21 @@ A和B分别表示双元运算符左边和右边的表达式
 ### 三元运算符
 
 - A?B:C
+	- 如果A==true，则返回B，否则返回C
+
+示例：
+```csharp
+true?1:2//返回1
+false?1:2//返回2
+```
 - A between B..C
+	- 判断A是否介于B和C的值之间，如果B==null并且C==null，则返回true，否则如果B==null，则值判断A<=C，否则如果C==null，则只判断A>=B
+
+示例：
+```csharp
+1 between 2..3 //返回false
+1 between 0..3 //返回true
+```
 
 ### 标识符表达式
 - this
