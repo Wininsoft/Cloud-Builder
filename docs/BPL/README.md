@@ -10,6 +10,24 @@ BPL语言是Business Process Language（业务处理语言）的缩写， 专门用于在Cloud Build
 - 内置核心类库， [文档参考](http://www.cloudbuilder.cc/Document)
 - 支持断点调试， [视频教程](http://www.cloudbuilder.cc/Video/Detail?id=32)
 
+## 基础数据类型
+
+- bool：布尔类型，包含一下可能的值
+	- true
+	- false
+- string：字符类型，字符类型可以用单引号或者双引号来包裹进行表示，两者效果完全相同
+	- '测试'
+	- "测试"
+
+- byte：字节类型，占用一个字节，值范围是0-255
+- short：短整形，占用2个字节
+- int：整形，占用4个字节
+- long：长整形，占用8个字节
+- float：浮点型，占用4个字节
+- double：双精度浮点型，占用8个字节
+- decimal：数值类型，占用8个字节
+
+
 ## 表达式
 
 ### 值表达式
