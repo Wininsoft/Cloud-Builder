@@ -1,43 +1,49 @@
-# ÅúÁ¿Êı¾İ²Ù×÷
-Í¨¹ıÅúÁ¿Êı¾İ²Ù×÷£¬ ÎÒÃÇ¿ÉÒÔÖ±½ÓÉú³ÉÒ»ÌõsqlÓï¾ä¶ÔÊı¾İ½øĞĞÅúÁ¿É¾³ı£¬¸üĞÂ£¬²åÈë£¬¶ø²»ÓÃÏÈ°ÑÊı¾İ¶ÁÈ¡µ½·şÎñ¶ËÄÚ´æÔÙ½øĞĞ²Ù×÷£¬ ´Ó¶ø¿ÉÒÔ´ó·ù¶ÈÌáÉı²Ù×÷ĞÔÄÜ¡£
+# æ‰¹é‡æ•°æ®æ“ä½œ
+é€šè¿‡æ‰¹é‡æ•°æ®æ“ä½œï¼Œ æˆ‘ä»¬å¯ä»¥ç›´æ¥ç”Ÿæˆä¸€æ¡sqlè¯­å¥å¯¹æ•°æ®è¿›è¡Œæ‰¹é‡åˆ é™¤ï¼Œæ›´æ–°ï¼Œæ’å…¥ï¼Œè€Œä¸ç”¨å…ˆæŠŠæ•°æ®è¯»å–åˆ°æœåŠ¡ç«¯å†…å­˜å†è¿›è¡Œæ“ä½œï¼Œ ä»è€Œå¯ä»¥å¤§å¹…åº¦æå‡æ“ä½œæ€§èƒ½ã€‚
 
-×¢Òâ£º
-ÅúÁ¿²Ù×÷ÒòÎª ²»¾­¹ıÄÚ´æ£¬ËùÒÔ²»»á´¥·¢ÊµÌåµÄ·şÎñ¶ËÊı¾İ²Ù×÷Ïà¹ØÊÂ¼ş£¬Èç²åÈëÊ±/ºó£¬¸üĞÂÊ±/ºó£¬É¾³ıÊ±/ºó£¬±£´æÊ±/ºó£¬ Ò²²»»á´¥·¢ÊµÌåÊôĞÔµÄÖµ¸Ä±äÊ±¼ä£¬ ²¢ÇÒ²»»á²úÉúÊı¾İĞŞ¸ÄÈÕÖ¾¡£
+æ³¨æ„ï¼š
+æ‰¹é‡æ“ä½œå› ä¸º ä¸ç»è¿‡å†…å­˜ï¼Œæ‰€ä»¥ä¸ä¼šè§¦å‘å®ä½“çš„æœåŠ¡ç«¯æ•°æ®æ“ä½œç›¸å…³äº‹ä»¶ï¼Œå¦‚æ’å…¥æ—¶/åï¼Œæ›´æ–°æ—¶/åï¼Œåˆ é™¤æ—¶/åï¼Œä¿å­˜æ—¶/åï¼Œ ä¹Ÿä¸ä¼šè§¦å‘å®ä½“å±æ€§çš„å€¼æ”¹å˜æ—¶é—´ï¼Œ å¹¶ä¸”ä¸ä¼šäº§ç”Ÿæ•°æ®ä¿®æ”¹æ—¥å¿—ã€‚
 
-### ÅúÁ¿É¾³ı
+### æ‰¹é‡åˆ é™¤
 
-Óï·¨£º
+è¯­æ³•ï¼š
 query.BatchDelete();
 
-Ê¾Àı£º
-- ÅúÁ¿É¾³ıÈ¥ÄêµÄÈÕÖ¾ĞÅÏ¢
+ç¤ºä¾‹ï¼š
+- æ‰¹é‡åˆ é™¤å»å¹´çš„æ—¥å¿—ä¿¡æ¯
+```csharp
 ApplicationData.LogSet.Where(w=>w.CreateTime.Year==DateTime.Now.Year-1).BatchDelete();
+```
 
-### ÅúÁ¿¸üĞÂ
+### æ‰¹é‡æ›´æ–°
 
-Óï·¨£º
+è¯­æ³•ï¼š
 query.BatchUpdate(updateLambda);
 
-Ê¾Àı£º
-- ÅúÁ¿¸üĞÂ¿Í»§´ı°İ·ÃÈÕÆÚÎª¿ÕµÄ¿Í»§£¬ÉèÖÃÆä´ı°İ·ÃÈÕÆÚÎª7Ììºó£¬²¢ÇÒÉèÖÃ×´Ì¬Îª´ø°İ·Ã
+ç¤ºä¾‹ï¼š
+- æ‰¹é‡æ›´æ–°å®¢æˆ·å¾…æ‹œè®¿æ—¥æœŸä¸ºç©ºçš„å®¢æˆ·ï¼Œè®¾ç½®å…¶å¾…æ‹œè®¿æ—¥æœŸä¸º7å¤©åï¼Œå¹¶ä¸”è®¾ç½®çŠ¶æ€ä¸ºå¸¦æ‹œè®¿
+```csharp
 ApplicationData.CustomerSet.Where(w=>w.NextVisitDate==null).BatchUpdate(item=>{
 	item.NextVisitDate=DateTime.Today.AddDays(7),
-	item.Status="´ı°İ·Ã"
+	item.Status="å¾…æ‹œè®¿"
 })
-- ÅúÁ¿°ÑÒµÎñÔ±Îª01µÄ¿Í»§»®×ª¸øÒµÎñÔ±02
-var newSalesman=ApplicationData.EmployeeSet.Where(w=>w.No=="01");//µÃµ½ÒµÎñÔ±02µÄÊµÌå¶ÔÏó
-ApplicationData.CustomerSet.Wheere(w=>w.SalesMan.No=="01").BatchUpdate(item=>item.SalesMan==newSalesman);//ÅúÁ¿¸üĞÂ
-
-### ÅúÁ¿²åÈë
+```
+- æ‰¹é‡æŠŠä¸šåŠ¡å‘˜ä¸º01çš„å®¢æˆ·åˆ’è½¬ç»™ä¸šåŠ¡å‘˜02
+```csharp
+var newSalesman=ApplicationData.EmployeeSet.Where(w=>w.No=="01");//å¾—åˆ°ä¸šåŠ¡å‘˜02çš„å®ä½“å¯¹è±¡
+ApplicationData.CustomerSet.Wheere(w=>w.SalesMan.No=="01").BatchUpdate(item=>item.SalesMan==newSalesman);//æ‰¹é‡æ›´æ–°
+```
+### æ‰¹é‡æ’å…¥
 query.BatchInsert(insertLambda);
 
-Ê¾Àı£º
-- ÅúÁ¿°Ñ×òÌìµÄÈÕÖ¾Êı¾İÒÆ¶¯µ½ÀúÊ·ÈÕÖ¾±í
+ç¤ºä¾‹ï¼š
+- æ‰¹é‡æŠŠæ˜¨å¤©çš„æ—¥å¿—æ•°æ®ç§»åŠ¨åˆ°å†å²æ—¥å¿—è¡¨
+```csharp
 var logQuery=ApplicationData.LogSet.Where(w=>w.CreateTime.Date==DateTime.Date.AddDays(-1));
 logQuery.BatchInsert(s=>new ApplicationData.HistoryLog(){
 	CreateTime=s.CreateTime
 	Content=s.Content
-});//ÅúÁ¿¸´ÖÆµ½HistoryLog±í
-logQuery.BatchDelete();//ÅúÁ¿É¾³ı
-
+});//æ‰¹é‡å¤åˆ¶åˆ°HistoryLogè¡¨
+logQuery.BatchDelete();//æ‰¹é‡åˆ é™¤
+```
 
