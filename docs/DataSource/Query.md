@@ -125,3 +125,14 @@ ApplicationData.CustomerSet.Select(s=>new{
 生成sql参考：
 select [it].[Name], [it].[Type] from [Customer] [it]
 
+
+### 获取结果数
+
+语法：query.Count()
+
+示例：
+```csharp
+ApplicationData.CustomerSet.Count()
+```
+生成sql参考：
+select count(*) from [Customer] [it]
