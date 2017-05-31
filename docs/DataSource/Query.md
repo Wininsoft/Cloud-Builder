@@ -202,7 +202,7 @@ select avg([it].[Amount]) from [Customer] [it]
 
 ### 获取合计值
 
-语法：query.Syn(lambda)
+语法：query.Sum(lambda)
 
 示例：
 ```csharp
