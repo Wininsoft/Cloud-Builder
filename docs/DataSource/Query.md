@@ -110,3 +110,18 @@ ApplicationData.GroupBy(g=>new{
 ```
 生成的sql参考：
 select [it].[Type], year([it].[CreateTime]) from [Customer] [it] group by [it].[Type], year([it].[CreateTime])
+
+### 选择返回结果
+
+语法：query.Select(selectLambda);
+
+示例：
+```csharp
+ApplicationData.CustomerSet.Select(s=>new{
+  s.Name,
+  s.Type
+})
+```
+生成sql参考：
+select [it].[Name], [it].[Type] from [Customer] [it]
+
