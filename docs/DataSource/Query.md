@@ -154,3 +154,62 @@ ApplicationData.CustomerSet.Count()
 ```sql
 select count(*) from [Customer] [it]
 ```
+
+### 获取最大值
+
+语法：query.Max(lambda)
+
+示例：
+```csharp
+ApplicationData.OrderSet.Max(m=>m.Amount);
+```
+
+生成sql参考：
+```sql
+select max([it].[Amount]) from [Customer] [it]
+```
+
+
+### 获取最小值
+
+语法：query.Min(lambda)
+
+示例：
+```csharp
+ApplicationData.OrderSet.Min(m=>m.Amount);
+```
+
+生成sql参考：
+```sql
+select min([it].[Amount]) from [Customer] [it]
+```
+
+
+### 获取平均值
+
+语法：query.Average(lambda)
+
+示例：
+```csharp
+ApplicationData.OrderSet.Average(m=>m.Amount);
+```
+
+生成sql参考：
+```sql
+select avg([it].[Amount]) from [Customer] [it]
+```
+
+
+### 获取合计值
+
+语法：query.Syn(lambda)
+
+示例：
+```csharp
+ApplicationData.OrderSet.Sum(m=>m.Amount);
+```
+
+生成sql参考：
+```sql
+select sum([it].[Amount]) from [Customer] [it]
+```
