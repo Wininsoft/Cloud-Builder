@@ -1,0 +1,27 @@
+# 电子邮件发送
+
+### 系统参数设置
+
+我们需要先邮件发送进行系统参数配置，邮件发送服务才能正确的发送邮件。
+
+
+
+### 方法一
+
+使用EmailService.Send(string to, string cc, string title,string content)方法，如：
+
+```csharp
+EmailService.Send("ryanlin@outlook.com",null,"您有一个新的审批任务","审批内容");
+```
+
+注意：
+这个方法柄不是实时发送电子邮件，而是在Sys_EmailDelivery表中插入一条待发送的数据， 最终由邮件发送服务定期进行处理。
+
+### 方法二
+
+直接在Sys_EmailDelivery表插入邮件发送请求记录
+如：
+var delivery=new Sys_EmailDelivery();
+delivery.Title="您有一个新的审批任务";
+delivery.Content="邮件内容";
+delivery.To="ryanlin@outlook.com";
