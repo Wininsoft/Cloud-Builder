@@ -7,7 +7,9 @@
 语法：
 [数据源].[表]Set，其中[数据源]为数据源的名称，[表]为表的名称。
 示例：
-- ApplicationData.CustomerSet
+```csharp
+ApplicationData.CustomerSet
+```
 表示查询ApplicationData数据源Customer表的全部数据
 生成的sql语句参考：
 select * from [Customer]
@@ -18,12 +20,16 @@ select * from [Customer]
 查询.Where(lambda)， 其中 lambda表示要对查询进行过滤的布尔类型lambda表达式
 
 示例：
-- ApplicationData.CustomerSet.Where(w=>w.Type=="Personal")
+```csharp
+ApplicationData.CustomerSet.Where(w=>w.Type=="Personal")
+```
 查询Type字段的值等于Personnal的客户
 生成的sql语句参考：
 select * from [Customer] as [it] where [it].[Type]=='Personal'
 
-- ApplicationData.CustomerSet.Where(w=.w.Type=="Personal"&&w.NextVisitDate==DateTime.Today)
+```csharp
+ApplicationData.CustomerSet.Where(w=.w.Type=="Personal"&&w.NextVisitDate==DateTime.Today)
+```
 查询Type字段值等于Personal，并且NextVisitDate值等于金泰你的客户
 生成的sql语句参考：
 select * from [Customer] as [it] where [it].[Type]=='Personal' and w [it]NextVisitDate==convert(getdate() as date)
