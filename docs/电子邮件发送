@@ -3,7 +3,7 @@
 ### 系统参数设置
 
 我们需要先邮件发送进行系统参数配置，邮件发送服务才能正确的发送邮件。
-
+系统参数界面在Core项目中，界面名称Sys_ParameterManage， 打开界面，打开邮件页签进行配置。
 
 
 ### 方法一
@@ -21,7 +21,15 @@ EmailService.Send("ryanlin@outlook.com",null,"您有一个新的审批任务","�
 
 直接在Sys_EmailDelivery表插入邮件发送请求记录
 如：
+```csharp
 var delivery=new Sys_EmailDelivery();
 delivery.Title="您有一个新的审批任务";
 delivery.Content="邮件内容";
 delivery.To="ryanlin@outlook.com";
+
+//如果需要附件，可以：
+var attachment=nw Sys_EmailAttachment();
+delivery.Attachments.Add(attachment);
+attachment.Name="test.txt";
+attachment.Data=data;//附件数据
+```
