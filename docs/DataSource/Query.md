@@ -88,3 +88,25 @@ ApplicationData.OrderSet.OrderByDescending(o=>o.Amount).Skip(20)
 ApplicationData.OrderSet.OrderByDescending(o=>o.Amount).Skip(100).Take(20)
 ```
 获取销售订单金额最大的第100到120条数
+
+### 分组
+
+语法：query.GroupBy(groupByLambda);
+
+示例：
+```csharp
+ApplicationData.CustomerSet.GroupBy(g=>g.Type);
+```
+按照Type对客户进行分组
+
+生成的sql参考：
+select [it].[Type] from [Customer] [it] group by [it].[Type]
+
+```csharp
+ApplicationData.GroupBy(g=>new{
+  g.Type,
+  g.CreateTimeYear
+})
+```
+生成的sql参考：
+select [it].[Type], year([it].[CreateTime]) from [Customer] [it] group by [it].[Type], year([it].[CreateTime])
