@@ -1,72 +1,84 @@
-# ²éÑ¯
+# æŸ¥è¯¢
 
-Í¨¹ı²éÑ¯Óï¾ä£¬Æ½Ì¨»á°Ñ²éÑ¯Óï¾ä·­Òë³ÉsqlÓï¾ä·¢ËÍ¸ø µ×²ãÊı¾İÔ´½øĞĞÖ´ĞĞ£¬È»ºó·µ»ØÇ¿ÀàĞÍµÄ²éÑ¯½á¹û¡£
+é€šè¿‡æŸ¥è¯¢è¯­å¥ï¼Œå¹³å°ä¼šæŠŠæŸ¥è¯¢è¯­å¥ç¿»è¯‘æˆsqlè¯­å¥å‘é€ç»™ åº•å±‚æ•°æ®æºè¿›è¡Œæ‰§è¡Œï¼Œç„¶åè¿”å›å¼ºç±»å‹çš„æŸ¥è¯¢ç»“æœã€‚
 
-### ²éÑ¯Õû¸ö±íµÄÈ«²¿Êı¾İ
+### æŸ¥è¯¢æ•´ä¸ªè¡¨çš„å…¨éƒ¨æ•°æ®
 
-Óï·¨£º
-[Êı¾İÔ´].[±í]Set£¬ÆäÖĞ[Êı¾İÔ´]ÎªÊı¾İÔ´µÄÃû³Æ£¬[±í]Îª±íµÄÃû³Æ¡£
-Ê¾Àı£º
+è¯­æ³•ï¼š
+[æ•°æ®æº].[è¡¨]Setï¼Œå…¶ä¸­[æ•°æ®æº]ä¸ºæ•°æ®æºçš„åç§°ï¼Œ[è¡¨]ä¸ºè¡¨çš„åç§°ã€‚
+ç¤ºä¾‹ï¼š
 - ApplicationData.CustomerSet
-±íÊ¾²éÑ¯ApplicationDataÊı¾İÔ´Customer±íµÄÈ«²¿Êı¾İ
-Éú³ÉµÄsqlÓï¾ä²Î¿¼£º
+è¡¨ç¤ºæŸ¥è¯¢ApplicationDataæ•°æ®æºCustomerè¡¨çš„å…¨éƒ¨æ•°æ®
+ç”Ÿæˆçš„sqlè¯­å¥å‚è€ƒï¼š
 select * from [Customer]
 
-### ¹ıÂË
+### è¿‡æ»¤
 
-Óï·¨£º
-²éÑ¯.Where(lambda)£¬ ÆäÖĞ lambda±íÊ¾Òª¶Ô²éÑ¯½øĞĞ¹ıÂËµÄ²¼¶ûÀàĞÍlambda±í´ïÊ½
+è¯­æ³•ï¼š
+æŸ¥è¯¢.Where(lambda)ï¼Œ å…¶ä¸­ lambdaè¡¨ç¤ºè¦å¯¹æŸ¥è¯¢è¿›è¡Œè¿‡æ»¤çš„å¸ƒå°”ç±»å‹lambdaè¡¨è¾¾å¼
 
-Ê¾Àı£º
+ç¤ºä¾‹ï¼š
 - ApplicationData.CustomerSet.Where(w=>w.Type=="Personal")
-²éÑ¯Type×Ö¶ÎµÄÖµµÈÓÚPersonnalµÄ¿Í»§
-Éú³ÉµÄsqlÓï¾ä²Î¿¼£º
+æŸ¥è¯¢Typeå­—æ®µçš„å€¼ç­‰äºPersonnalçš„å®¢æˆ·
+ç”Ÿæˆçš„sqlè¯­å¥å‚è€ƒï¼š
 select * from [Customer] as [it] where [it].[Type]=='Personal'
 
 - ApplicationData.CustomerSet.Where(w=.w.Type=="Personal"&&w.NextVisitDate==DateTime.Today)
-²éÑ¯Type×Ö¶ÎÖµµÈÓÚPersonal£¬²¢ÇÒNextVisitDateÖµµÈÓÚ½ğÌ©ÄãµÄ¿Í»§
-Éú³ÉµÄsqlÓï¾ä²Î¿¼£º
+æŸ¥è¯¢Typeå­—æ®µå€¼ç­‰äºPersonalï¼Œå¹¶ä¸”NextVisitDateå€¼ç­‰äºé‡‘æ³°ä½ çš„å®¢æˆ·
+ç”Ÿæˆçš„sqlè¯­å¥å‚è€ƒï¼š
 select * from [Customer] as [it] where [it].[Type]=='Personal' and w [it]NextVisitDate==convert(getdate() as date)
 
-### ÅÅĞò
+### æ’åº
 
-Óï·¨£º
-- ²éÑ¯.OrderBy(lambdad)£¬ÉıĞò
-- ²éÑ¯.OrderByDescending(lambdad)£¬½µĞò
-- ²éÑ¯.ThenBy(lambdad)£¬¸½¼ÓÉıĞò
-- ²éÑ¯.ThenByDescending(lambdad)£¬¸½¼Ó½µĞò
+è¯­æ³•ï¼š
+- æŸ¥è¯¢.OrderBy(lambdad)ï¼Œå‡åº
+- æŸ¥è¯¢.OrderByDescending(lambdad)ï¼Œé™åº
+- æŸ¥è¯¢.ThenBy(lambdad)ï¼Œé™„åŠ å‡åº
+- æŸ¥è¯¢.ThenByDescending(lambdad)ï¼Œé™„åŠ é™åº
 
-ÆäÖĞÉıĞò/¸½¼ÓÉıĞò£¬½µĞò/¸½¼Ó½µĞòµÄÇø±ğÊÇ£¬ Èç¹û²éÑ¯ÒÑ¾­ÓĞÅÅĞò£¬ ÔòÉıĞò/½µĞò»á¸²¸Çµô²éÑ¯ÖĞÔ­ÓĞµÄÅÅĞò£¬¶ø¸½¼ÓÉıĞò/½µĞò²»»á£¬¶øÊÇÔÚÔ­ÓĞ²éÑ¯ÅÅĞò»ù´¡ÉÏ½øÒ»²½ÅÅĞò
+å…¶ä¸­å‡åº/é™„åŠ å‡åºï¼Œé™åº/é™„åŠ é™åºçš„åŒºåˆ«æ˜¯ï¼Œ å¦‚æœæŸ¥è¯¢å·²ç»æœ‰æ’åºï¼Œ åˆ™å‡åº/é™åºä¼šè¦†ç›–æ‰æŸ¥è¯¢ä¸­åŸæœ‰çš„æ’åºï¼Œè€Œé™„åŠ å‡åº/é™åºä¸ä¼šï¼Œè€Œæ˜¯åœ¨åŸæœ‰æŸ¥è¯¢æ’åºåŸºç¡€ä¸Šè¿›ä¸€æ­¥æ’åº
 
-Ê¾Àı£º
-- ApplicationData.CustomerSet.OrderBy(o=>o.CreateTime)
-°´ÕÕ´´½¨Ê±¼ä¶Ô¿Í»§½øĞĞÉıĞò
-Éú³ÉµÄsqlÓï¾ä²Î¿¼£º
+ç¤ºä¾‹ï¼š
+```csharp
+ApplicationData.CustomerSet.OrderBy(o=>o.CreateTime)
+```
+æŒ‰ç…§åˆ›å»ºæ—¶é—´å¯¹å®¢æˆ·è¿›è¡Œå‡åº
+ç”Ÿæˆçš„sqlè¯­å¥å‚è€ƒï¼š
 select * from [Customer] as [it] order by [it].[CreateTime]
 
-- ApplicationData.CustomerSet.OrderByDescending(o=>o.CreateTime)
-°´ÕÕ´´½¨Ê±¼ä¶Ô¿Í»§½øĞĞ½µĞò
-Éú³ÉµÄsqlÓï¾ä²Î¿¼£º
+```csharp
+ApplicationData.CustomerSet.OrderByDescending(o=>o.CreateTime)
+```
+æŒ‰ç…§åˆ›å»ºæ—¶é—´å¯¹å®¢æˆ·è¿›è¡Œé™åº
+ç”Ÿæˆçš„sqlè¯­å¥å‚è€ƒï¼š
 select * from [Customer] as [it] order by [it].[CreateTime] desc
 
-- ApplicationData.SalesOrderSet.OrderBy(o=>o.Customer).ThenByDescending(o=>o.Amount)
-¶ÔÏúÊÛ¶©µ¥ÏÈ°´ÕÕ¿Í»§ÉıĞò£¬È»ºó°´ÕÕ½ğ¶î½øĞĞ½µĞò
-Éú³ÉµÄsqlÓï¾ä²Î¿¼£º
+```csharp
+ApplicationData.SalesOrderSet.OrderBy(o=>o.Customer).ThenByDescending(o=>o.Amount)
+```
+å¯¹é”€å”®è®¢å•å…ˆæŒ‰ç…§å®¢æˆ·å‡åºï¼Œç„¶åæŒ‰ç…§é‡‘é¢è¿›è¡Œé™åº
+ç”Ÿæˆçš„sqlè¯­å¥å‚è€ƒï¼š
 select * from [Customer] as [it] order by [it].[Customer], [it].[Amount] desc
 
-### ·ÖÒ³
+### åˆ†é¡µ
 
-Óï·¨£º
-- ²éÑ¯.Take(int pageSize); »ñÈ¡¸ø¶¨ÌõÊıµÄÊı¾İ
-- ²éÑ¯.Skip(int startIndex); ´Ó¸ø¶¨ĞĞºÅ¿ªÊ¼»ñÈ¡Êı¾İ
+è¯­æ³•ï¼š
+- æŸ¥è¯¢.Take(int pageSize); è·å–ç»™å®šæ¡æ•°çš„æ•°æ®
+- æŸ¥è¯¢.Skip(int startIndex); ä»ç»™å®šè¡Œå·å¼€å§‹è·å–æ•°æ®
 
-Ê¾Àı£º
-- ApplicationData.OrderSet.OrderByDescending(o=>o.Amount).Take(20)
-»ñÈ¡ÏúÊÛ¶©µ¥½ğ¶î×î´óµÄ20ÌõÊı¾İ
+ç¤ºä¾‹ï¼š
+```csharp
+ApplicationData.OrderSet.OrderByDescending(o=>o.Amount).Take(20)
+```
+è·å–é”€å”®è®¢å•é‡‘é¢æœ€å¤§çš„20æ¡æ•°æ®
 
-Ê¾Àı£º
-- ApplicationData.OrderSet.OrderByDescending(o=>o.Amount).Skip(20)
-»ñÈ¡ÏúÊÛ¶©µ¥°´ÕÕ½ğ¶î½µĞòºóµÄµÚ20Ìõ¿ªÊ¼µÄÊı¾İ
+ç¤ºä¾‹ï¼š
+```csharp
+ApplicationData.OrderSet.OrderByDescending(o=>o.Amount).Skip(20)
+```
+è·å–é”€å”®è®¢å•æŒ‰ç…§é‡‘é¢é™åºåçš„ç¬¬20æ¡å¼€å§‹çš„æ•°æ®
 
-- ApplicationData.OrderSet.OrderByDescending(o=>o.Amount).Skip(100).Take(20)
-»ñÈ¡ÏúÊÛ¶©µ¥½ğ¶î×î´óµÄµÚ100µ½120ÌõÊı
+```csharp
+ApplicationData.OrderSet.OrderByDescending(o=>o.Amount).Skip(100).Take(20)
+```
+è·å–é”€å”®è®¢å•é‡‘é¢æœ€å¤§çš„ç¬¬100åˆ°120æ¡æ•°
