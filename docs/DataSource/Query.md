@@ -12,7 +12,7 @@ ApplicationData.CustomerSet
 ```
 表示查询ApplicationData数据源Customer表的全部数据
 生成的sql语句参考：
-```
+```sql
 select * from [Customer]
 ```
 
@@ -27,7 +27,7 @@ ApplicationData.CustomerSet.Where(w=>w.Type=="Personal")
 ```
 查询Type字段的值等于Personnal的客户
 生成的sql语句参考：
-```
+```sql
 select * from [Customer] as [it] where [it].[Type]=='Personal'
 ```
 
@@ -36,7 +36,7 @@ ApplicationData.CustomerSet.Where(w=.w.Type=="Personal"&&w.NextVisitDate==DateTi
 ```
 查询Type字段值等于Personal，并且NextVisitDate值等于金泰你的客户
 生成的sql语句参考：
-```
+```sql
 select * from [Customer] as [it] where [it].[Type]=='Personal' and w [it]NextVisitDate==convert(getdate() as date)
 ```
 
