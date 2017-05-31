@@ -213,3 +213,32 @@ ApplicationData.OrderSet.Sum(m=>m.Amount);
 ```sql
 select sum([it].[Amount]) from [Customer] [it]
 ```
+
+
+### 获取第一条记录
+
+语法：query.First(), query.FirstOrDefault()
+
+示例:
+```csharp
+ApplcationData.OrderSet.OrderByDescending(o=>o.Amount).First();
+```
+
+sql:
+```sql
+select top 1 * from [Order] [it] order by [it].[Amount] desc
+```
+
+### 获取唯一一条记录
+
+语法：query.Single(), query.SingleOrDefault()
+
+示例:
+```csharp
+ApplcationData.OrderSet.OrderByDescending(o=>o.Amount).Single();
+```
+
+sql:
+```sql
+select top 2 * from [Order] [it] order by [it].[Amount] desc
+```
