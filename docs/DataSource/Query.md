@@ -12,7 +12,9 @@ ApplicationData.CustomerSet
 ```
 表示查询ApplicationData数据源Customer表的全部数据
 生成的sql语句参考：
+```
 select * from [Customer]
+```
 
 ### 过滤
 
@@ -25,14 +27,18 @@ ApplicationData.CustomerSet.Where(w=>w.Type=="Personal")
 ```
 查询Type字段的值等于Personnal的客户
 生成的sql语句参考：
+```
 select * from [Customer] as [it] where [it].[Type]=='Personal'
+```
 
 ```csharp
 ApplicationData.CustomerSet.Where(w=.w.Type=="Personal"&&w.NextVisitDate==DateTime.Today)
 ```
 查询Type字段值等于Personal，并且NextVisitDate值等于金泰你的客户
 生成的sql语句参考：
+```
 select * from [Customer] as [it] where [it].[Type]=='Personal' and w [it]NextVisitDate==convert(getdate() as date)
+```
 
 ### 排序
 
@@ -50,21 +56,27 @@ ApplicationData.CustomerSet.OrderBy(o=>o.CreateTime)
 ```
 按照创建时间对客户进行升序
 生成的sql语句参考：
+```sql
 select * from [Customer] as [it] order by [it].[CreateTime]
+```
 
 ```csharp
 ApplicationData.CustomerSet.OrderByDescending(o=>o.CreateTime)
 ```
 按照创建时间对客户进行降序
 生成的sql语句参考：
+```sql
 select * from [Customer] as [it] order by [it].[CreateTime] desc
+```
 
 ```csharp
 ApplicationData.SalesOrderSet.OrderBy(o=>o.Customer).ThenByDescending(o=>o.Amount)
 ```
 对销售订单先按照客户升序，然后按照金额进行降序
 生成的sql语句参考：
+```sql
 select * from [Customer] as [it] order by [it].[Customer], [it].[Amount] desc
+```
 
 ### 分页
 
@@ -100,7 +112,9 @@ ApplicationData.CustomerSet.GroupBy(g=>g.Type);
 按照Type对客户进行分组
 
 生成的sql参考：
+```sql
 select [it].[Type] from [Customer] [it] group by [it].[Type]
+```
 
 ```csharp
 ApplicationData.GroupBy(g=>new{
@@ -109,8 +123,9 @@ ApplicationData.GroupBy(g=>new{
 })
 ```
 生成的sql参考：
+```sql
 select [it].[Type], year([it].[CreateTime]) from [Customer] [it] group by [it].[Type], year([it].[CreateTime])
-
+```
 ### 选择返回结果
 
 语法：query.Select(selectLambda);
@@ -123,8 +138,9 @@ ApplicationData.CustomerSet.Select(s=>new{
 })
 ```
 生成sql参考：
+```sql
 select [it].[Name], [it].[Type] from [Customer] [it]
-
+```
 
 ### 获取结果数
 
@@ -135,4 +151,6 @@ select [it].[Name], [it].[Type] from [Customer] [it]
 ApplicationData.CustomerSet.Count()
 ```
 生成sql参考：
+```sql
 select count(*) from [Customer] [it]
+```
