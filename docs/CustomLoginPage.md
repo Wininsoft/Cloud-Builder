@@ -28,8 +28,7 @@
 
 
 样例：
-``` html
-<body style="background-color: #ddd; padding: 0px; margin: 0px;background-image:url(../Resources/login_background.png&appVersion=@{AppVersion});background-repeat:no-repeat;background-size:cover">
+``` html<body style="background-color: #ddd; padding: 0px; margin: 0px;background-image:url(../Resources/login_background.png?version=@{AppVersion});background-repeat:no-repeat;background-size:cover">
   <form id="formid"  name= "myform" method = 'post'  action = 'Login'>
         <div style="margin-top:25%;display:inline-block;padding-left:55%">
             <div style="color: white; margin-top: 20px">@{ApplicationName}</div>
@@ -63,4 +62,5 @@
         }
     </script>
 </body>
+
 ```
