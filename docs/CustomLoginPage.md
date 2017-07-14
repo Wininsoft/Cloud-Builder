@@ -17,13 +17,11 @@
 ### 常用地址
 - 获取背景图片：应用名称/ApplicationService/GetLoginBackgroundImage
 - 获取登陆Logo：应用名称/ApplicationService/GetLoginLogo
-
-
-### 登陆页面提交
-
-提交地址为： /应用名称/Account/Login
+- 登陆提交：应用名称/Account/Login
 
 其中'应用名称'为应用发布的地址，如果发布到根路径下，Default，或发布地址直接是/Account/Login
+
+### 登陆页面提交
 
 需要传递的参数如下：
 - userName：用户名
