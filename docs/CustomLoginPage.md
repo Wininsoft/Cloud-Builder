@@ -8,11 +8,11 @@
 
 ### 登陆页面变量替换
 
-@{ApplicationName}：应用的显示名称
-@W{ErrorMessage}：如果登陆错误，则获取登陆的错误消息
-@{UserName}：如果登录错误，则获取登陆用户名
-@{AppVersion}：获取应用版本号
-@{EnableCaptcha}：获取是否启用验证码
+- @{ApplicationName}：应用的显示名称
+- @W{ErrorMessage}：如果登陆错误，则获取登陆的错误消息
+- @{UserName}：如果登录错误，则获取登陆用户名
+- @{AppVersion}：获取应用版本号
+- @{EnableCaptcha}：获取是否启用验证码
 
 
 ### 登陆页面提交
@@ -22,7 +22,7 @@
 其中'应用名称'为应用发布的地址，如果发布到根路径下，Default，或发布地址直接是/Account/Login
 
 需要传递的参数如下：
-userName：用户名
-password：密码
-captcha：验证码，只有在启用验证码的时候需要用到
+- userName：用户名
+- password：密码
+- captcha：验证码，只有在启用验证码的时候需要用到
 
