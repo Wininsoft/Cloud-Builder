@@ -9,7 +9,7 @@
 ### 登陆页面变量替换
 
 - @{ApplicationName}：应用的显示名称
-- @W{ErrorMessage}：如果登陆错误，则获取登陆的错误消息
+- @{ErrorMessage}：如果登陆错误，则获取登陆的错误消息
 - @{UserName}：如果登录错误，则获取登陆用户名
 - @{AppVersion}：获取应用版本号
 - @{EnableCaptcha}：获取是否启用验证码
