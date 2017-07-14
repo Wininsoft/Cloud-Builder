@@ -28,7 +28,7 @@
 
 
 样例：
-`
+```
 <body style="background-color: #ddd; padding: 0px; margin: 0px;background-image:url(../Resource/Get?id=login_background.png&appVersion@{AppVersion});background-repeat:no-repeat;background-size:cover">
   <form id="formid"  name= "myform" method = 'post'  action = 'Login'>
         <div style="margin-top:25%;display:inline-block;padding-left:55%">
@@ -64,4 +64,4 @@
     </script>
 </body>
 
-`
+```
