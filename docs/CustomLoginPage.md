@@ -26,3 +26,42 @@
 - password：密码
 - captcha：验证码，只有在启用验证码的时候需要用到
 
+
+样例：
+`
+<body style="background-color: #ddd; padding: 0px; margin: 0px;background-image:url(../Resource/Get?id=login_background.png&appVersion@{AppVersion});background-repeat:no-repeat;background-size:cover">
+  <form id="formid"  name= "myform" method = 'post'  action = 'Login'>
+        <div style="margin-top:25%;display:inline-block;padding-left:55%">
+            <div style="color: white; margin-top: 20px">@{ApplicationName}</div>
+            <div style="margin-top: 20px">               
+                <div style="margin:10px">
+                    <span style="color:white">用户</span>
+                    <input type="text" id="userName" name="userName" value="@{UserName}" style="height: 18px; margin: 0px; background-color: #FFF8DF; border: 0; width: 150px" />
+                </div>
+                <div style="margin:10px">
+                    <span style="color:white">密码</span>
+                    <input type="password" id="password" name="password" onkeydown="if (event.which == 13) { login() }" style="height: 18px; margin: 0px; background-color: #FFF8DF; border: 0; width: 150px" />
+                    <a href="#" style="color: white; margin-left: 10px;" onclick="login()">登陆</a>
+                </div>
+                <div>
+                    <span style="color:red">@{ErrorMessage}</span>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script type="text/javascript">
+        function login() {           
+            if (document.getElementById('userName').value == null || document.getElementById('userName').value == '') {
+                alert('请输入用户名');
+                return;
+            }
+            if (document.getElementById('password').value == null || document.getElementById('password').value == '') {
+                alert('请输入密码');
+                return;
+            }
+            document.forms[0].submit();
+        }
+    </script>
+</body>
+
+`
