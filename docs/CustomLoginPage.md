@@ -14,6 +14,10 @@
 - @{AppVersion}：获取应用版本号
 - @{EnableCaptcha}：获取是否启用验证码
 
+### 常用地址
+- 获取背景图片：应用名称/ApplicationService/GetLoginBackgroundImage
+- 获取登陆Logo：应用名称/ApplicationService/GetLoginLogo
+
 
 ### 登陆页面提交
 
@@ -29,7 +33,7 @@
 
 样例：
 ``` html
-<body style="background-color: #ddd; padding: 0px; margin: 0px;background-image:url(../Resources/login_background.png?version=@{AppVersion});background-repeat:no-repeat;background-size:cover">
+<body style="background-color: #ddd; padding: 0px; margin: 0px;background-image:url(../ApplicationService/GetLoginBackgroundImage?version=@{AppVersion});background-repeat:no-repeat;background-size:cover">
   <form id="formid"  name= "myform" method = 'post'  action = 'Login'>
         <div style="margin-top:25%;display:inline-block;padding-left:55%">
             <div style="color: white; margin-top: 20px">@{ApplicationName}</div>
